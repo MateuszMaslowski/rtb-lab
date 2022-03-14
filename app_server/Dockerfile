@@ -7,4 +7,6 @@ COPY ["src/", "/opt/app_server"]
 
 WORKDIR "/opt/app_server"
 
-ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "main:app"]
+EXPOSE 8000:8000
+
+CMD ["uvicorn", "--host", "0.0.0.0", "main:app"]
